@@ -26,7 +26,7 @@ await Promise.all([
   }),
   backend.Bob(ctcBob, {
     ...stdlib.hasRandom,
-    getPassword: () => 12345
+    getPassword: () => 1234
   }),
 ]);
 
