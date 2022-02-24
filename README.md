@@ -4,8 +4,8 @@
 
 follow instruction on site
 
-## compile - inside folder workshoo
+## compile - inside folder workshoo
 ../reach compile
 
-## run - inside folder workshoo
+## run - inside folder workshoo
 ../reach run
