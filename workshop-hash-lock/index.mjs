@@ -18,17 +18,15 @@ console.log('Starting backends...');
 const getBalance = async (who) =>
   stdlib.formatCurrency(await stdlib.balanceOf(who), 4);
 
-await Promise.all([
-  backend.Alice(ctcAlice, {
-    ...stdlib.hasRandom,
-    amount: stdlib.parseCurrency(25),
-    password: 1234,
-  }),
-  backend.Bob(ctcBob, {
-    ...stdlib.hasRandom,
-    getPassword: () => 1234
-  }),
-]);
+backend.Alice(ctcAlice, {
+  ...stdlib.hasRandom,
+  amount: stdlib.parseCurrency(25),
+  password: 1234,
+})
+backend.Bob(ctcBob, {
+  ...stdlib.hasRandom,
+  getPassword: () => 1234
+})
 
 const balanceAlice = await getBalance(accAlice);
 const balanceBob = await getBalance(accBob);
